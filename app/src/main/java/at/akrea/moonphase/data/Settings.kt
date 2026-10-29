@@ -41,6 +41,10 @@ object Settings {
                 latitude = p.getDouble("place_lat"),
                 longitude = p.getDouble("place_lon"),
                 zoneId = p.getString("place_zone", "UTC")!!,
+                nameEn = p.getString("place_name_en", "")!!,
+                nameDe = p.getString("place_name_de", "")!!,
+                regionEn = p.getString("place_region_en", "")!!,
+                regionDe = p.getString("place_region_de", "")!!,
             )
         }
         return AppSettings(
@@ -67,6 +71,10 @@ object Settings {
                 putDouble("place_lat", it.latitude)
                 putDouble("place_lon", it.longitude)
                 putString("place_zone", it.zoneId)
+                putString("place_name_en", it.nameEn)
+                putString("place_name_de", it.nameDe)
+                putString("place_region_en", it.regionEn)
+                putString("place_region_de", it.regionDe)
             }
             putBoolean("widget_label", s.showWidgetLabel)
         }.commit()

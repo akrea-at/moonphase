@@ -364,9 +364,9 @@ private fun PlacePicker(place: Place?, onPick: (Place) -> Unit) {
                         }
                         .padding(horizontal = 6.dp, vertical = 8.dp),
                 ) {
-                    Text(result.name, style = MaterialTheme.typography.bodyLarge)
+                    Text(result.displayName(formats.locale), style = MaterialTheme.typography.bodyLarge)
                     Text(
-                        result.label(formats.locale).removePrefix(result.name).removePrefix(", ") + " · " + result.zoneId,
+                        result.details(formats.locale) + " · " + result.zoneId,
                         style = MaterialTheme.typography.bodySmall,
                         color = Sky.Muted,
                     )

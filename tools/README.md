@@ -40,11 +40,13 @@ store listings. The background and monochrome layers are vectors in `res/drawabl
 
 ## Cities
 
-Download `cities15000.zip` and `admin1CodesASCII.txt` from https://download.geonames.org/export/dump/.
+Download `cities15000.zip`, `admin1CodesASCII.txt` and `alternateNamesV2.zip` (about 200 MB; read
+straight from the zip, used for the English and German city and region names) from
+https://download.geonames.org/export/dump/.
 
 ```sh
 python3 -I tools/prepare_cities.py --cities cities15000.zip --admin1 admin1CodesASCII.txt \
-    --out app/src/main/assets/cities.tsv
+    --alternates alternateNamesV2.zip --out app/src/main/assets/cities.tsv
 ```
 
 ## Attribution

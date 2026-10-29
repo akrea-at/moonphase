@@ -13,13 +13,24 @@ data class Place(
     val latitude: Double,
     val longitude: Double,
     val zoneId: String,
+    val nameEn: String = "",
+    val nameDe: String = "",
+    val regionEn: String = "",
+    val regionDe: String = "",
 ) {
-    fun label(locale: Locale): String {
+    fun displayName(locale: Locale) = localised(locale, name, nameEn, nameDe)
+
+    fun details(locale: Locale): String {
+        val city = displayName(locale)
         val countryName = Locale("", country).getDisplayCountry(locale).ifEmpty { country }
-        return listOf(name, region.takeIf { it.isNotEmpty() && it != name }, countryName)
-            .filterNotNull()
-            .joinToString(", ")
+        val regionName = localised(locale, region, regionEn, regionDe).takeIf { it.isNotEmpty() && it != city }
+        return listOfNotNull(regionName, countryName).joinToString(", ")
     }
+
+    fun label(locale: Locale) = displayName(locale) + ", " + details(locale)
+
+    private fun localised(locale: Locale, base: String, en: String, de: String) =
+        (if (locale.language == "de") de else en).ifEmpty { base }
 }
 
 /** Offline city search over assets/cities.tsv (format: see tools/prepare_cities.py). */
@@ -71,11 +82,16 @@ class Cities private constructor(
             reader.forEachLine { line ->
                 val f = line.split('\t')
                 if (f.size < 9) return@forEachLine
-                places += Place(f[0], f[3], f[4], f[5].toDouble(), f[6].toDouble(), f[7])
+                val extra = List(4) { f.getOrElse(9 + it) { "" } }
+                places += Place(
+                    f[0], f[3], f[4], f[5].toDouble(), f[6].toDouble(), f[7],
+                    nameEn = extra[0], nameDe = extra[1], regionEn = extra[2], regionDe = extra[3],
+                )
                 val name = fold(f[0])
                 names += name
                 asciiNames += if (f[1].isEmpty()) name else fold(f[1])
-                alternates += if (f[2].isEmpty()) emptyArray() else f[2].split(',').map(::fold).toTypedArray()
+                val alts = (if (f[2].isEmpty()) emptyList() else f[2].split(',')) + extra.take(2).filter { it.isNotEmpty() }
+                alternates += alts.map(::fold).distinct().toTypedArray()
             }
             return Cities(places, names.toTypedArray(), asciiNames.toTypedArray(), alternates.toTypedArray())
         }

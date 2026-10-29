@@ -16,4 +16,4 @@
 tools/.cache/
 tools/out/
 __pycache__/
-/keystore.properties
+/dist/

@@ -24,16 +24,15 @@ org.gradle.java.home=/opt/android-studio/jbr
 ./gradlew assembleRelease
 ```
 
-The minified release APK is written unsigned to `app/build/outputs/apk/release/app-release-unsigned.apk`. To sign it with your own key, create a `keystore.properties` next to `settings.gradle.kts` (it is gitignored):
+The minified release APK is written unsigned to `app/build/outputs/apk/release/app-release-unsigned.apk`. For a quick install, `./gradlew installDebug` uses the debug key.
 
-```properties
-storeFile=/path/to/release.jks
-storePassword=...
-keyAlias=...
-keyPassword=...
-```
+## Release
 
-The signed APK is then `app/build/outputs/apk/release/app-release.apk`. For a quick install, `./gradlew installDebug` uses the debug key.
+Releases are reproducible: F-Droid builds the tagged commit itself and, if its APK matches, ships the APK signed by the developer. To release:
+
+1. Increase `versionCode` and `versionName` in `app/build.gradle.kts` and add `fastlane/metadata/android/{en-US,de-DE}/changelogs/<versionCode>.txt`.
+2. Commit, tag `v<versionName>` and push both.
+3. Run `tools/release.sh <versionName>`. It builds the tag from a clean clone, signs the APK with the release key (`~/keys/moonphase-release.jks`, or `MOONPHASE_KEYSTORE`) and attaches it to the GitHub release.
 
 Asset regeneration is described in [tools/README.md](tools/README.md). Store listing text and screenshots for F-Droid are in `fastlane/metadata/android/`.
 

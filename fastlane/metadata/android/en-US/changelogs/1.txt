@@ -1,0 +1,1 @@
+Initial release: current moon phase, monthly calendar with new and full moon times, photo-realistic widget, device location or offline city search, English and German.

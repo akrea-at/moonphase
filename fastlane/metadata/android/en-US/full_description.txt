@@ -1,0 +1,17 @@
+Moon Phase shows the moon as it looks right now, rendered from NASA lunar maps with the correct terminator, libration and axis tilt. The unlit part stays faintly visible in earthshine.
+
+- Current phase name, illumination and age, plus the next new and full moon with local date and time
+- Month calendar with the phase for every day and the exact local peak time of new and full moon
+- Photo-realistic, resizable home-screen widget with the dark side visible, rendered at the widget's actual size
+- Location from the device or an offline search of about 34,000 cities, each with its time zone
+- Moon shown as seen from the southern hemisphere when your location is south of the equator
+- English and German, following the phone's language or chosen in the app
+
+Privacy: the app has no internet permission, no tracking and no ads. The device location is only read when you ask for it, or once a day when the app is opened.
+
+Light on resources: there is no background service. The widget redraws every few hours on an alarm that never wakes the device, and when the time zone, clock, language or settings change.
+
+Accuracy: all astronomy is computed on the device using the algorithms from Jean Meeus, Astronomical Algorithms. Phase times agree with an independent ephemeris to within seconds.
+
+Moon imagery: NASA's Scientific Visualization Studio / LRO (LROC and LOLA teams).
+City data: GeoNames (geonames.org), CC BY 4.0.

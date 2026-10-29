@@ -1,0 +1,17 @@
+Mondphase zeigt den Mond so, wie er gerade aussieht: berechnet aus NASA-Mondkarten mit korrekter Licht-Schatten-Grenze, Libration und Achsneigung. Der unbeleuchtete Teil bleibt im Erdschein schwach sichtbar.
+
+- Aktuelle Phase, Beleuchtung und Alter sowie der nächste Neu- und Vollmond mit lokalem Datum und Uhrzeit
+- Monatskalender mit der Phase für jeden Tag und der genauen lokalen Uhrzeit von Neu- und Vollmond
+- Fotorealistisches, frei skalierbares Widget mit sichtbarer Nachtseite, in der tatsächlichen Größe des Widgets gerendert
+- Standort über das Gerät oder eine Offline-Suche in rund 34.000 Städten, jeweils mit Zeitzone
+- Darstellung wie auf der Südhalbkugel, wenn der Standort südlich des Äquators liegt
+- Deutsch und Englisch, je nach Systemsprache oder in der App wählbar
+
+Datenschutz: Die App hat keine Internetberechtigung, kein Tracking und keine Werbung. Der Gerätestandort wird nur auf Wunsch ermittelt oder einmal täglich beim Öffnen der App.
+
+Ressourcenschonend: Es läuft kein Hintergrunddienst. Das Widget wird alle paar Stunden über einen Alarm aktualisiert, der das Gerät nie aufweckt, sowie bei Änderungen von Zeitzone, Uhrzeit, Sprache oder Einstellungen.
+
+Genauigkeit: Alle Berechnungen laufen auf dem Gerät nach den Algorithmen aus Jean Meeus, Astronomical Algorithms. Die Phasenzeiten stimmen mit einer unabhängigen Ephemeride auf Sekunden genau überein.
+
+Mondbilder: NASA's Scientific Visualization Studio / LRO (LROC- und LOLA-Teams).
+Städtedaten: GeoNames (geonames.org), CC BY 4.0.

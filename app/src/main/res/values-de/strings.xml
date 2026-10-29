@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Mondphase</string>
+    <string name="settings">Einstellungen</string>
+    <string name="back">Zurück</string>
+
+    <string name="phase_new_moon">Neumond</string>
+    <string name="phase_waxing_crescent">Zunehmende Sichel</string>
+    <string name="phase_first_quarter">Erstes Viertel</string>
+    <string name="phase_waxing_gibbous">Zunehmender Mond</string>
+    <string name="phase_full_moon">Vollmond</string>
+    <string name="phase_waning_gibbous">Abnehmender Mond</string>
+    <string name="phase_last_quarter">Letztes Viertel</string>
+    <string name="phase_waning_crescent">Abnehmende Sichel</string>
+
+    <string name="illumination">%1$d %% beleuchtet</string>
+    <string name="age_days">%1$.1f Tage seit Neumond</string>
+    <string name="next_new_moon">Nächster Neumond</string>
+    <string name="next_full_moon">Nächster Vollmond</string>
+    <string name="location_none">Kein Ort festgelegt · %1$s</string>
+    <string name="location_device">Gerätestandort · %1$s</string>
+    <string name="location_place">%1$s · %2$s</string>
+
+    <string name="previous_month">Voriger Monat</string>
+    <string name="next_month">Nächster Monat</string>
+    <string name="illumination_noon">Mittags zu %1$d %% beleuchtet</string>
+    <string name="peak_at">Höhepunkt um %1$s</string>
+
+    <string name="settings_location">Standort</string>
+    <string name="settings_location_hint">Neu- und Vollmond treten überall im selben Moment ein. Der Standort bestimmt die Zeitzone der angezeigten Zeiten und ob der Mond so gezeigt wird, wie man ihn von der Südhalbkugel aus sieht.</string>
+    <string name="mode_device">Gerätestandort</string>
+    <string name="mode_device_hint">Ungefähre Position, wird nur beim Tippen auf Aktualisieren oder einmal täglich beim Öffnen der App ermittelt.</string>
+    <string name="mode_place">Gewählter Ort</string>
+    <string name="mode_place_hint">Nach einer Stadt suchen. Funktioniert offline.</string>
+    <string name="update_location">Standort aktualisieren</string>
+    <string name="locating">Standort wird ermittelt…</string>
+    <string name="location_failed">Der Standort konnte nicht ermittelt werden. Ist die Standortermittlung eingeschaltet?</string>
+    <string name="permission_denied">Die Standortberechtigung wurde nicht erteilt.</string>
+    <string name="no_position">Noch keine Position</string>
+    <string name="updated_at">Aktualisiert %1$s</string>
+    <string name="time_zone">Zeitzone: %1$s</string>
+    <string name="search_city">Stadt suchen</string>
+    <string name="loading_cities">Städte werden geladen…</string>
+    <string name="no_city">Keine passende Stadt</string>
+    <string name="coordinates">%1$.2f° %2$s, %3$.2f° %4$s</string>
+    <string name="north">N</string>
+    <string name="south">S</string>
+    <string name="east">O</string>
+    <string name="west">W</string>
+
+    <string name="settings_widget">Widget</string>
+    <string name="show_widget_label">Mondphase im Widget anzeigen</string>
+    <string name="settings_language">Sprache</string>
+    <string name="language_system">Systemstandard</string>
+    <string name="settings_about">Info</string>
+    <string name="attribution_moon">Mondbilder: NASA\'s Scientific Visualization Studio / LRO (LROC- &amp; LOLA-Teams)</string>
+    <string name="attribution_cities">Städtedaten: GeoNames (geonames.org), CC BY 4.0</string>
+    <string name="version">Version %1$s</string>
+
+    <string name="widget_description">Die aktuelle Mondphase</string>
+    <string name="widget_label">%1$s · %2$d %%</string>
+</resources>

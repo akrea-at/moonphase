@@ -1,0 +1,1 @@
+Erste Version: aktuelle Mondphase, Monatskalender mit Neu- und Vollmondzeiten, fotorealistisches Widget, Gerätestandort oder Offline-Städtesuche, Deutsch und Englisch.

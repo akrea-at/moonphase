@@ -1,0 +1,1 @@
+Place names now follow the app language, for example "Wien, Österreich" in German, and the city search also finds English and German names.

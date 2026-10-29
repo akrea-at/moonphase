@@ -1,0 +1,1 @@
+Ortsnamen folgen jetzt der App-Sprache, etwa „Wien, Österreich“ statt „Vienna“, und die Städtesuche findet auch englische und deutsche Namen.
